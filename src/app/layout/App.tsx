@@ -28,16 +28,10 @@ function App() {
   return (
     <div className="app">
       <h1 style={{ color: "green" }}>Re-Store</h1>
-      <Catalog/>
-      <ul>
-        {/* {products.map((item, index) => ( */}
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price} zł
-          </li>
-        ))}
-      </ul>
-      <button onClick={addProduct}>Add product</button>
+      <Catalog 
+        products={products}
+        addProduct={addProduct}
+      />
     </div>
   );
 }
