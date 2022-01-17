@@ -5,11 +5,7 @@ import {
   CardActions,
   CardContent,
   CardHeader,
-  CardMedia,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
+  CardMedia, Typography
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Product } from "../../app/models/product";
