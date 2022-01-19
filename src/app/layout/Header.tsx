@@ -46,7 +46,7 @@ export default function Header({ darkMode, handleChange }: Props) {
             variant="h6"
             component={NavLink}
             to="/"
-            //   exact={true}
+            exact={true}
             sx={navStyles}
           >
             RE-STORE
