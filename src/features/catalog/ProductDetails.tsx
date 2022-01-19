@@ -2,6 +2,7 @@ import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, T
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import agent from "../../app/api/agent";
+import NotFound from "../../app/errors/NotFound";
 import { Product } from "../../app/models/product";
 
 export default function ProductDetails() {
@@ -17,7 +18,7 @@ export default function ProductDetails() {
     }, [id]) // wykonaj efekt po załadowaniu strony i KAŻDEJ ZMIANIE id
 
     if(loading) return <h3>Loading...</h3>
-    if (!product) return <h3>Products not found</h3>
+    if (!product) return <h3><NotFound/></h3>
 
   return(
      <Grid container spacing={6}>
