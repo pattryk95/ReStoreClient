@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import agent from "../../app/api/agent";
 import NotFound from "../../app/errors/NotFound";
+import LoadingComponent from "../../app/layout/LandingComponent";
 import { Product } from "../../app/models/product";
 
 export default function ProductDetails() {
@@ -17,7 +18,7 @@ export default function ProductDetails() {
         .finally(()=> setLoading(false));
     }, [id]) // wykonaj efekt po załadowaniu strony i KAŻDEJ ZMIANIE id
 
-    if(loading) return <h3>Loading...</h3>
+    if(loading) return <LoadingComponent message="Loading product..."/>
     if (!product) return <h3><NotFound/></h3>
 
   return(
